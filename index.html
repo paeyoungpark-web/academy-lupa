@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박배영 — AI·통계·연구방법 학습 기록</title>
+<meta name="description" content="aSSIST AI융합 공학박사과정에서 2년간 이수한 44개 과목의 학습 기록. 구조방정식·다변량통계·Foundation Model·사례연구방법론을 과목 단위로 공개합니다. 로뎀시스템 대표이사 박배영.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="박배영 — AI·통계·연구방법 학습 기록">
+<meta property="og:description" content="박사과정 44과목 403건의 학습 자산. 무엇을 배웠는지 과목 단위로 확인할 수 있습니다.">
+<meta property="og:url" content="https://academy.lupa.kr/">
+<link rel="canonical" href="https://academy.lupa.kr/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D10'/%3E%3Crect x='8' y='9' width='4' height='14' fill='%23F1F2F4'/%3E%3Crect x='14' y='13' width='4' height='10' fill='%23F1F2F4' opacity='.62'/%3E%3Crect x='20' y='17' width='4' height='6' fill='%23F1F2F4' opacity='.38'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"박배영","jobTitle":"대표이사","worksFor":{"@type":"Organization","name":"로뎀시스템"},"alumniOf":{"@type":"CollegeOrUniversity","name":"서울과학종합대학원대학교(aSSIST)"},"knowsAbout":["구조방정식","다변량통계분석","AI Foundation Model","사례연구방법론","빅데이터 분석","AI 거버넌스"],"url":"https://academy.lupa.kr/"}}
+</script>
+<style>
+  /* ── academy.lupa.kr — Lupa 계측기 디자인 토큰 공유 ────── */
+  :root{
+    --ground:#0C0D10; --surface:#15171B; --sunk:#101216; --bar:#1A1C21;
+    --t1:#F1F2F4; --t2:rgba(241,242,244,.62); --t3:rgba(241,242,244,.38);
+    --t4:rgba(241,242,244,.18);
+    --hair:rgba(241,242,244,.13); --hair2:rgba(241,242,244,.26);
+    --wash:rgba(241,242,244,.06);
+    --index:#F1F2F4;
+    --shadow:0 24px 70px rgba(0,0,0,.55), 0 2px 8px rgba(0,0,0,.4);
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Apple SD Gothic Neo","Pretendard",system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+    color-scheme:dark;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --ground:#F4F5F6; --surface:#FFFFFF; --sunk:#EDEEF0; --bar:#F7F7F8;
+      --t1:#0C0D10; --t2:rgba(12,13,16,.62); --t3:rgba(12,13,16,.38);
+      --t4:rgba(12,13,16,.20);
+      --hair:rgba(12,13,16,.12); --hair2:rgba(12,13,16,.24);
+      --wash:rgba(12,13,16,.055);
+      --index:#0C0D10;
+      --shadow:0 24px 70px rgba(12,13,16,.22), 0 2px 8px rgba(12,13,16,.08);
+      color-scheme:light;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{background:var(--ground);color:var(--t1);font-family:var(--sans);
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--t1);text-decoration:none}
+  ::selection{background:var(--t1);color:var(--ground)}
+
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  section{padding:74px 0}
+  h2{font-size:clamp(23px,4vw,31px);font-weight:640;margin-bottom:12px;
+    letter-spacing:-.022em;text-wrap:balance}
+  .sub{color:var(--t2);font-size:16px;max-width:660px}
+  .sub b{color:var(--t1);font-weight:580}
+  .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--t3);font-weight:500}
+  .shead{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+
+  /* ── Hero ── */
+  .hero{padding:92px 0 52px}
+  .hero .who{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--t3);text-transform:uppercase}
+  .hero .who b{color:var(--t1);font-weight:620;font-size:12px;letter-spacing:.06em}
+  .hero h1{font-size:clamp(28px,5.4vw,46px);font-weight:640;letter-spacing:-.032em;
+    line-height:1.16;margin:20px 0 0;text-wrap:balance;max-width:780px}
+  .hero p.lede{margin:20px 0 30px;color:var(--t2);font-size:16.5px;max-width:620px}
+  .hero p.lede b{color:var(--t1);font-weight:580}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-block;padding:12px 26px;border-radius:4px;font-weight:560;
+    font-size:15px;letter-spacing:-.005em;transition:opacity .14s ease,background .14s ease}
+  .btn.primary{background:var(--index);color:var(--ground)}
+  .btn.primary:hover{opacity:.85}
+  .btn.ghost{border:1px solid var(--hair2);color:var(--t1)}
+  .btn.ghost:hover{background:var(--wash)}
+  .btn:focus-visible{outline:2px solid var(--t2);outline-offset:3px}
+
+  /* ── 계기 판독부 ── */
+  .readout{margin:46px 0 0;border:1px solid var(--hair);border-radius:4px;background:var(--surface);
+    display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden}
+  .readout div{padding:16px 15px 15px;border-left:1px solid var(--hair)}
+  .readout div:first-child{border-left:0}
+  .readout .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--t3)}
+  .readout .v{font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:24px;font-weight:620;margin-top:7px;letter-spacing:-.012em}
+  .readout .v em{font-style:normal;font-size:12px;color:var(--t3);margin-left:2px}
+  .readout .n{font-size:10.5px;color:var(--t3);margin-top:3px}
+
+  /* ── 전문 영역 ── */
+  .fields{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair);
+    border-radius:4px;overflow:hidden;margin-top:28px}
+  .field{background:var(--surface);display:grid;grid-template-columns:168px 1fr 62px;
+    gap:18px;padding:19px 20px;align-items:start}
+  .field .nm{font-size:14.5px;font-weight:620;letter-spacing:-.012em}
+  .field .nm span{display:block;font-family:var(--mono);font-size:9.5px;color:var(--t3);
+    letter-spacing:.1em;text-transform:uppercase;margin-top:5px;font-weight:400}
+  .field .cs{font-size:12.5px;color:var(--t2);line-height:1.75;min-width:0}
+  .field .cs b{color:var(--t1);font-weight:560}
+  .field .ct{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;
+    font-size:19px;font-weight:620}
+  .field .ct em{font-style:normal;font-size:10px;color:var(--t3);display:block;margin-top:2px;
+    font-weight:400;letter-spacing:.08em;text-transform:uppercase}
+
+  /* ── 할 수 있는 것 ── */
+  .can{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:28px}
+  .can article{border:1px solid var(--hair);border-radius:4px;padding:20px;background:var(--surface)}
+  .can h3{font-size:14px;font-weight:620;margin-bottom:8px;letter-spacing:-.012em}
+  .can p{font-size:12.5px;color:var(--t2);line-height:1.72}
+  .can .src{font-family:var(--mono);font-size:9.5px;color:var(--t3);margin-top:10px;
+    letter-spacing:.05em;border-top:1px solid var(--hair);padding-top:9px}
+
+  /* ── 아카이브 소개 ── */
+  .pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);
+    border:1px solid var(--hair);border-radius:4px;overflow:hidden;margin-top:26px}
+  .pipe article{background:var(--surface);padding:20px 19px}
+  .pipe .st{font-family:var(--mono);font-size:10px;color:var(--t3);letter-spacing:.1em}
+  .pipe h3{font-size:14.5px;font-weight:600;letter-spacing:-.012em;margin:9px 0 7px}
+  .pipe p{font-size:12.5px;color:var(--t2);line-height:1.68}
+
+  .note{border:1px solid var(--hair2);border-radius:4px;padding:18px 20px;background:var(--sunk);
+    margin-top:26px;font-size:12.5px;color:var(--t2);line-height:1.75}
+  .note b{color:var(--t1);font-weight:580}
+  .note ul{margin:9px 0 0 16px}
+  .note li{margin-top:4px}
+
+  .cta{text-align:center;border-top:1px solid var(--hair)}
+  .cta .btns{justify-content:center}
+  .cta .sub{margin:0 auto 26px}
+  footer{border-top:1px solid var(--hair);padding:30px 0 56px}
+  footer .f{display:flex;gap:16px;flex-wrap:wrap;align-items:center;
+    font-family:var(--mono);font-size:10.5px;color:var(--t3);letter-spacing:.04em}
+  footer a{color:var(--t2)}
+  footer a:hover{color:var(--t1)}
+  footer .right{margin-left:auto}
+
+  @media(max-width:860px){
+    .readout{grid-template-columns:repeat(2,1fr)}
+    .readout div:nth-child(3){border-left:0}
+    .field{grid-template-columns:1fr;gap:10px}
+    .field .ct{text-align:left}
+    .field .ct em{display:inline;margin-left:6px}
+    .can,.pipe{grid-template-columns:1fr}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="who"><b>박배영</b> <span>로뎀시스템 대표이사</span> <span>· aSSIST AI융합 공학박사과정</span></div>
+  <h1>2년간 44개 과목으로 배운 것을,<br>과목 단위로 공개합니다</h1>
+  <p class="lede">이력서 한 줄로는 무엇을 아는지 알 수 없습니다. 그래서 박사과정에서 이수한
+  <b>44개 과목 403건의 자료</b>를 그대로 열어 둡니다. 어떤 과목을 어느 학기에 들었고,
+  무엇을 다뤘는지 직접 확인하실 수 있습니다.</p>
+  <div class="btns">
+    <a class="btn primary" href="archive.html">학습 기록 열기</a>
+    <a class="btn ghost" href="#fields">전문 영역 보기</a>
+  </div>
+
+  <div class="readout">
+    <div><div class="k">이수 과목</div><div class="v">44<em>개</em></div><div class="n">7개 학기</div></div>
+    <div><div class="k">학습 자료</div><div class="v">403<em>건</em></div><div class="n">첨부 838개</div></div>
+    <div><div class="k">수업 영상</div><div class="v">295<em>개</em></div><div class="n">강의·복습</div></div>
+    <div><div class="k">이수 학점</div><div class="v">30<em>/37</em></div><div class="n">졸업 7학점 전</div></div>
+    <div><div class="k">평점 평균</div><div class="v">3.99</div><div class="n">4.3 만점</div></div>
+  </div>
+</header>
+
+<section class="wrap" id="fields">
+  <div class="shead"><span class="lbl">01 · 전문 영역</span></div>
+  <h2>다섯 갈래로 쌓았습니다</h2>
+  <p class="sub">분야마다 실제로 이수한 과목을 함께 적었습니다. 과목명을 보시면 깊이를 가늠하실 수 있습니다.</p>
+  <div class="fields">
+    <article class="field">
+      <div class="nm">통계·분석<span>Statistics</span></div>
+      <div class="cs"><b>구조방정식(SEM)</b>, 다변량통계분석, 응용연구론, 빅데이터 연구와 데이터마이닝, Time Series Analysis, Text Mining &amp; NLP, Transformer Algorithm, 강화학습, Statistics with Python</div>
+      <div class="ct">14<em>과목</em></div>
+    </article>
+    <article class="field">
+      <div class="nm">AI·기술<span>AI Engineering</span></div>
+      <div class="cs"><b>AI Foundation Model 개발 1·2</b>, 제조업을 위한 AI 응용, AI-Native 클라우드 AI 인프라, Generative AI &amp; Prompt Engineering, AI 에이전트 기반 업무자동화, 노코드 자동화</div>
+      <div class="ct">14<em>과목</em></div>
+    </article>
+    <article class="field">
+      <div class="nm">연구방법<span>Research Method</span></div>
+      <div class="cs"><b>사례연구방법론</b>, 메커니즘 기반관점 연구, Model Building과 조직이론, AI 공학논문 세미나, 질적(사례) 연구방법, 설문조사 방법론, Doctoral Research Seminar I·II</div>
+      <div class="ct">11<em>과목</em></div>
+    </article>
+    <article class="field">
+      <div class="nm">지속가능·리더십<span>Sustainability</span></div>
+      <div class="cs">SDG General, Responsible Management in the Digital Era, Developing Responsible Leadership in times of Polycrisis (SDG MS 해외복수학위 과정)</div>
+      <div class="ct">3<em>과목</em></div>
+    </article>
+    <article class="field">
+      <div class="nm">경영·전략<span>Management</span></div>
+      <div class="cs">연구개론과 전략경영, 경영자 독서모임(MBS) 교양 과정</div>
+      <div class="ct">2<em>과목</em></div>
+    </article>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead"><span class="lbl">02 · 할 수 있는 일</span></div>
+  <h2>배운 것을 어디에 쓰는가</h2>
+  <p class="sub">과목에서 끝내지 않고 실제 업무와 연구에 적용한 영역입니다.</p>
+  <div class="can">
+    <article>
+      <h3>설문 기반 연구모형 설계·검증</h3>
+      <p>확인적 요인분석, 신뢰도·타당도 검정, 경로분석과 매개·조절효과까지 돌리고 논문 Results Section 형식으로 보고합니다.</p>
+      <div class="src">AI-STAT 구조방정식 · 다변량통계분석</div>
+    </article>
+    <article>
+      <h3>AI 모델의 구조 이해와 적용</h3>
+      <p>Foundation Model의 작동 구조를 이해한 상태에서 제조·업무 현장에 적용 범위를 판단합니다.</p>
+      <div class="src">AI Foundation Model 개발 1·2 · 제조업 AI 응용</div>
+    </article>
+    <article>
+      <h3>질적·사례연구 설계</h3>
+      <p>메커니즘 기반 관점으로 사례를 구조화하고, 이론 모형으로 올리는 절차를 따릅니다.</p>
+      <div class="src">사례연구방법론 · 메커니즘 기반관점 연구</div>
+    </article>
+    <article>
+      <h3>AI 에이전트로 업무 자동화</h3>
+      <p>비개발자도 쓸 수 있는 형태로 업무 흐름을 자동화하고, 사내 도구로 만듭니다. 이 사이트도 그 결과물입니다.</p>
+      <div class="src">AI 에이전트 업무자동화 · 바이브코딩 · 노코드 자동화</div>
+    </article>
+    <article>
+      <h3>데이터 파이프라인 구축</h3>
+      <p>흩어진 원천 데이터를 모아 정규화하고, 다른 출처와 교차검증해 신뢰할 수 있는 지표로 만듭니다.</p>
+      <div class="src">빅데이터 연구와 데이터마이닝 · AI &amp; Bigdata</div>
+    </article>
+    <article>
+      <h3>지속가능경영 관점의 의사결정</h3>
+      <p>SDG와 책임경영 프레임을 경영 판단에 연결합니다. 해외복수학위 과정에서 영문으로 수학했습니다.</p>
+      <div class="src">SDG General · Responsible Management</div>
+    </article>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="shead"><span class="lbl">03 · 이 기록을 만든 방법</span></div>
+  <h2>학습 기록도 직접 만들었습니다</h2>
+  <p class="sub">수업 자료는 Google Classroom, Drive, 학사시스템 세 곳에 흩어져 있었습니다.
+  이걸 하나로 묶는 아카이브를 직접 설계하고 만들었습니다. <b>이 페이지가 여는 데모가 그 결과물입니다.</b></p>
+  <div class="pipe">
+    <article><div class="st">STEP 1</div><h3>복제하지 않는 색인</h3><p>제목·분류·링크만 가져옵니다. 강의 영상과 교재 원본은 학교에 그대로 둡니다.</p></article>
+    <article><div class="st">STEP 2</div><h3>제목 파싱</h3><p>“[과정] 과목명(25.09 클래스) 교수명” 한 줄에서 과정·과목·기수·교수를 갈라냅니다.</p></article>
+    <article><div class="st">STEP 3</div><h3>성적표와 교차검증</h3><p>Classroom의 기수 표기는 실제 학기와 달랐습니다. 학사시스템과 매칭해 9개 과목의 학기를 바로잡았습니다.</p></article>
+    <article><div class="st">STEP 4</div><h3>숫자는 전부 계산</h3><p>통계·학기·영상 수·평점·졸업요건을 데이터에서 계산합니다. 평점 3.99는 학사시스템 값과 일치합니다.</p></article>
+    <article><div class="st">STEP 5</div><h3>지식화 7단계 추적</h3><p>색인 → 요약 → 전사 → 원자노트 → 업무 활용. 과목마다 지금 어디쯤인지 봅니다.</p></article>
+    <article><div class="st">STEP 6</div><h3>졸업요건 점검</h3><p>37학점·평점 3.5·필수과목·학술지 게재 요건을 체크리스트로 자동 점검합니다.</p></article>
+  </div>
+  <div class="note">
+    <b>공개 범위</b> — 이 데모는 제 실제 학습 기록이지만, 다음은 가렸습니다.
+    <ul>
+      <li>교수·조교 이름 40명 마스킹 (김○수 교수) — 제 기록을 위해 다른 분의 이름을 공개할 이유는 없습니다</li>
+      <li>Classroom·Drive 원본 링크 전부 제거 — 학교 자료는 학교에 둡니다</li>
+      <li>학번·연락처 제거</li>
+    </ul>
+    과목명·학기·자료 제목·이수 내역은 그대로 둡니다. 그게 이 페이지의 요점이기 때문입니다.
+  </div>
+</section>
+
+<section class="wrap cta">
+  <h2>직접 눌러 보세요</h2>
+  <p class="sub">44개 과목과 403건의 자료가 들어 있는 실제 화면입니다. 검색·필터·학사관리까지 전부 동작합니다.</p>
+  <div class="btns"><a class="btn primary" href="archive.html">학습 기록 열기</a></div>
+</section>
+
+<footer class="wrap">
+  <div class="f">
+    <span>박배영 · 로뎀시스템 대표이사</span>
+    <a href="https://lupa.kr">lupa.kr</a>
+    <span class="right">aSSIST AI융합 공학박사과정 · 2025–</span>
+  </div>
+</footer>
+
+</body>
+</html>
