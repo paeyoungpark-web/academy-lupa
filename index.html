@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>박배영 — AI·통계·연구방법 학습 기록</title>
-<meta name="description" content="aSSIST AI융합 공학박사과정에서 2년간 이수한 44개 과목의 학습 기록. 구조방정식·다변량통계·Foundation Model·사례연구방법론을 과목 단위로 공개합니다. 로뎀시스템 대표이사 박배영.">
+<title>박배영 — AI 학습·실습 기록</title>
+<meta name="description" content="AI 석사와 박사과정에서 이수한 44개 과목의 학습 기록. 구조방정식·다변량통계·Foundation Model·사례연구방법론을 강의와 실습으로 익히고 있습니다. 로뎀시스템 대표이사 박배영.">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="박배영 — AI·통계·연구방법 학습 기록">
-<meta property="og:description" content="박사과정 44과목 403건의 학습 자산. 무엇을 배웠는지 과목 단위로 확인할 수 있습니다.">
+<meta property="og:title" content="박배영 — AI 학습·실습 기록">
+<meta property="og:description" content="AI 석사와 박사과정 44과목 403건. 지금도 수업과 실습이 이어지고 있습니다.">
 <meta property="og:url" content="https://academy.lupa.kr/">
 <link rel="canonical" href="https://academy.lupa.kr/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D10'/%3E%3Crect x='8' y='9' width='4' height='14' fill='%23F1F2F4'/%3E%3Crect x='14' y='13' width='4' height='10' fill='%23F1F2F4' opacity='.62'/%3E%3Crect x='20' y='17' width='4' height='6' fill='%23F1F2F4' opacity='.38'/%3E%3C/svg%3E">
@@ -77,8 +77,16 @@
   .btn:focus-visible{outline:2px solid var(--t2);outline-offset:3px}
 
   /* ── 계기 판독부 ── */
-  .readout{margin:46px 0 0;border:1px solid var(--hair);border-radius:4px;background:var(--surface);
-    display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden}
+  .nowbar{margin:40px 0 0;border:1px solid var(--hair2);border-radius:4px;background:var(--sunk);
+    padding:14px 18px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+  .nowbar .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--t3);flex:none}
+  .nowbar .cl{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:540;letter-spacing:-.01em}
+  .nowbar .cl span{position:relative;padding-left:13px}
+  .nowbar .cl span::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;
+    border-radius:50%;background:var(--index);transform:translateY(-50%)}
+  .readout{margin:10px 0 0;border:1px solid var(--hair);border-radius:4px;background:var(--surface);
+    display:grid;grid-template-columns:repeat(6,1fr);overflow:hidden}
   .readout div{padding:16px 15px 15px;border-left:1px solid var(--hair)}
   .readout div:first-child{border-left:0}
   .readout .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;
@@ -137,7 +145,9 @@
 
   @media(max-width:860px){
     .readout{grid-template-columns:repeat(2,1fr)}
-    .readout div:nth-child(3){border-left:0}
+    .readout div:nth-child(odd){border-left:0}
+    .nowbar{display:block}
+    .nowbar .cl{margin-top:8px;gap:10px}
     .field{grid-template-columns:1fr;gap:10px}
     .field .ct{text-align:left}
     .field .ct em{display:inline;margin-left:6px}
@@ -149,20 +159,26 @@
 <body>
 
 <header class="hero wrap">
-  <div class="who"><b>박배영</b> <span>로뎀시스템 대표이사</span> <span>· aSSIST AI융합 공학박사과정</span></div>
-  <h1>2년간 44개 과목으로 배운 것을,<br>과목 단위로 공개합니다</h1>
-  <p class="lede">이력서 한 줄로는 무엇을 아는지 알 수 없습니다. 그래서 박사과정에서 이수한
-  <b>44개 과목 403건의 자료</b>를 그대로 열어 둡니다. 어떤 과목을 어느 학기에 들었고,
-  무엇을 다뤘는지 직접 확인하실 수 있습니다.</p>
+  <div class="who"><b>박배영</b> <span>로뎀시스템 대표이사</span> <span>· aSSIST AI융합 공학박사과정 재학</span></div>
+  <h1>AI 석사와 박사과정에서,<br>44개 과목을 강의와 실습으로 익히고 있습니다</h1>
+  <p class="lede">이력서 한 줄로는 무엇을 아는지 알 수 없습니다. 그래서 이수한
+  <b>44개 과목 403건의 자료와 68건의 제출 과제</b>를 그대로 열어 둡니다.
+  끝난 공부가 아니라 <b>지금도 진행 중인 과정</b>입니다. 매 과목 자료를 직접 정리하고 복습해 제 지식으로 만듭니다.</p>
   <div class="btns">
     <a class="btn primary" href="archive.html">학습 기록 열기</a>
     <a class="btn ghost" href="#fields">전문 영역 보기</a>
   </div>
 
+  <div class="nowbar">
+    <div class="k">이번 학기 수강 중 · 2026학년도 3학기</div>
+    <div class="cl"><span>AI-STAT 구조방정식</span><span>제조업을 위한 AI 응용 (AI Tech Application 1)</span></div>
+  </div>
+
   <div class="readout">
-    <div><div class="k">이수 과목</div><div class="v">44<em>개</em></div><div class="n">7개 학기</div></div>
+    <div><div class="k">이수 과목</div><div class="v">44<em>개</em></div><div class="n">석사 10 · 박사 34</div></div>
     <div><div class="k">학습 자료</div><div class="v">403<em>건</em></div><div class="n">첨부 838개</div></div>
     <div><div class="k">수업 영상</div><div class="v">295<em>개</em></div><div class="n">강의·복습</div></div>
+    <div><div class="k">제출 과제</div><div class="v">68<em>건</em></div><div class="n">실습 산출물</div></div>
     <div><div class="k">이수 학점</div><div class="v">30<em>/37</em></div><div class="n">졸업 7학점 전</div></div>
     <div><div class="k">평점 평균</div><div class="v">3.99</div><div class="n">4.3 만점</div></div>
   </div>
@@ -170,8 +186,8 @@
 
 <section class="wrap" id="fields">
   <div class="shead"><span class="lbl">01 · 전문 영역</span></div>
-  <h2>다섯 갈래로 쌓았습니다</h2>
-  <p class="sub">분야마다 실제로 이수한 과목을 함께 적었습니다. 과목명을 보시면 깊이를 가늠하실 수 있습니다.</p>
+  <h2>다섯 갈래로 쌓고 있습니다</h2>
+  <p class="sub">분야마다 실제로 이수한 과목을 함께 적었습니다. 과목명을 보시면 어디까지 다뤘는지 가늠하실 수 있습니다.</p>
   <div class="fields">
     <article class="field">
       <div class="nm">통계·분석<span>Statistics</span></div>
@@ -202,33 +218,33 @@
 </section>
 
 <section class="wrap">
-  <div class="shead"><span class="lbl">02 · 할 수 있는 일</span></div>
-  <h2>배운 것을 어디에 쓰는가</h2>
-  <p class="sub">과목에서 끝내지 않고 실제 업무와 연구에 적용한 영역입니다.</p>
+  <div class="shead"><span class="lbl">02 · 다루는 기술과 실습</span></div>
+  <h2>강의로 듣고, 손으로 돌려 봅니다</h2>
+  <p class="sub">과목마다 과제와 실습이 따라옵니다. 수업에서 끝내지 않고 제 연구와 회사 업무에 바로 적용하고 있습니다.</p>
   <div class="can">
     <article>
       <h3>설문 기반 연구모형 설계·검증</h3>
-      <p>확인적 요인분석, 신뢰도·타당도 검정, 경로분석과 매개·조절효과까지 돌리고 논문 Results Section 형식으로 보고합니다.</p>
+      <p>jamovi와 SEMLj로 확인적 요인분석부터 경로분석, 매개·조절효과, 부트스트래핑까지 직접 돌립니다. 결과는 논문 Results Section 형식으로 정리합니다.</p>
       <div class="src">AI-STAT 구조방정식 · 다변량통계분석</div>
     </article>
     <article>
       <h3>AI 모델의 구조 이해와 적용</h3>
-      <p>Foundation Model의 작동 구조를 이해한 상태에서 제조·업무 현장에 적용 범위를 판단합니다.</p>
+      <p>Foundation Model의 작동 구조를 코드 수준에서 따라가 보고, 제조·업무 현장에 어디까지 적용할 수 있는지 판단합니다. 이번 학기에도 수강 중입니다.</p>
       <div class="src">AI Foundation Model 개발 1·2 · 제조업 AI 응용</div>
     </article>
     <article>
       <h3>질적·사례연구 설계</h3>
-      <p>메커니즘 기반 관점으로 사례를 구조화하고, 이론 모형으로 올리는 절차를 따릅니다.</p>
+      <p>메커니즘 기반 관점으로 사례를 구조화하고 이론 모형으로 올립니다. 과제로 사례 논문 프로포절을 작성해 제출했습니다.</p>
       <div class="src">사례연구방법론 · 메커니즘 기반관점 연구</div>
     </article>
     <article>
       <h3>AI 에이전트로 업무 자동화</h3>
-      <p>비개발자도 쓸 수 있는 형태로 업무 흐름을 자동화하고, 사내 도구로 만듭니다. 이 사이트도 그 결과물입니다.</p>
+      <p>에이전트와 바이브코딩으로 업무 흐름을 자동화해 사내 도구로 만듭니다. 이 사이트와 학습 기록 전체가 그 실습의 결과물입니다.</p>
       <div class="src">AI 에이전트 업무자동화 · 바이브코딩 · 노코드 자동화</div>
     </article>
     <article>
       <h3>데이터 파이프라인 구축</h3>
-      <p>흩어진 원천 데이터를 모아 정규화하고, 다른 출처와 교차검증해 신뢰할 수 있는 지표로 만듭니다.</p>
+      <p>흩어진 원천 데이터를 모아 정규화하고 다른 출처와 교차검증해 믿을 수 있는 지표로 만듭니다. 이 페이지의 모든 숫자가 그 방식으로 계산됩니다.</p>
       <div class="src">빅데이터 연구와 데이터마이닝 · AI &amp; Bigdata</div>
     </article>
     <article>
@@ -241,9 +257,9 @@
 
 <section class="wrap">
   <div class="shead"><span class="lbl">03 · 이 기록을 만든 방법</span></div>
-  <h2>학습 기록도 직접 만들었습니다</h2>
-  <p class="sub">수업 자료는 Google Classroom, Drive, 학사시스템 세 곳에 흩어져 있었습니다.
-  이걸 하나로 묶는 아카이브를 직접 설계하고 만들었습니다. <b>이 페이지가 여는 데모가 그 결과물입니다.</b></p>
+  <h2>공부한 걸 정리하는 도구까지 직접 만듭니다</h2>
+  <p class="sub">수업 자료는 Google Classroom, Drive, 학사시스템 세 곳에 흩어져 있었습니다. 과목을 복습하려면 매번 세 곳을 뒤져야 했습니다.
+  그래서 하나로 묶는 아카이브를 직접 설계하고 만들었습니다. <b>배운 것을 바로 써먹은 사례이자, 이 페이지가 여는 데모입니다.</b></p>
   <div class="pipe">
     <article><div class="st">STEP 1</div><h3>복제하지 않는 색인</h3><p>제목·분류·링크만 가져옵니다. 강의 영상과 교재 원본은 학교에 그대로 둡니다.</p></article>
     <article><div class="st">STEP 2</div><h3>제목 파싱</h3><p>“[과정] 과목명(25.09 클래스) 교수명” 한 줄에서 과정·과목·기수·교수를 갈라냅니다.</p></article>
@@ -265,7 +281,7 @@
 
 <section class="wrap cta">
   <h2>직접 눌러 보세요</h2>
-  <p class="sub">44개 과목과 403건의 자료가 들어 있는 실제 화면입니다. 검색·필터·학사관리까지 전부 동작합니다.</p>
+  <p class="sub">44개 과목과 403건의 자료, 68건의 과제가 들어 있는 실제 화면입니다. 검색·필터·학사관리까지 전부 동작합니다.</p>
   <div class="btns"><a class="btn primary" href="archive.html">학습 기록 열기</a></div>
 </section>
 
@@ -273,7 +289,7 @@
   <div class="f">
     <span>박배영 · 로뎀시스템 대표이사</span>
     <a href="https://lupa.kr">lupa.kr</a>
-    <span class="right">aSSIST AI융합 공학박사과정 · 2025–</span>
+    <span class="right">aSSIST AI석사 · AI융합 공학박사과정 재학</span>
   </div>
 </footer>
 
