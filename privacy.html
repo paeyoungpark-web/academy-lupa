@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보 처리방침 — 학습 아카이브</title>
+<meta name="description" content="학습 아카이브(academy.lupa.kr, my.lupa.kr) 개인정보 처리방침. 「개인정보 보호법」 제30조에 따라 수립·공개합니다.">
+<link rel="canonical" href="https://academy.lupa.kr/privacy">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D10'/%3E%3Crect x='8' y='9' width='4' height='14' fill='%23F1F2F4'/%3E%3Crect x='14' y='13' width='4' height='10' fill='%23F1F2F4' opacity='.62'/%3E%3Crect x='20' y='17' width='4' height='6' fill='%23F1F2F4' opacity='.38'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ground:#0C0D10; --surface:#15171B; --sunk:#101216;
+    --t1:#F1F2F4; --t2:rgba(241,242,244,.62); --t3:rgba(241,242,244,.38);
+    --hair:rgba(241,242,244,.13); --hair2:rgba(241,242,244,.26);
+    --wash:rgba(241,242,244,.06); --index:#F1F2F4;
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Apple SD Gothic Neo","Pretendard",system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+    color-scheme:dark;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --ground:#F4F5F6; --surface:#FFFFFF; --sunk:#EDEEF0;
+      --t1:#0C0D10; --t2:rgba(12,13,16,.62); --t3:rgba(12,13,16,.38);
+      --hair:rgba(12,13,16,.12); --hair2:rgba(12,13,16,.24);
+      --wash:rgba(12,13,16,.055); --index:#0C0D10;
+      color-scheme:light;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:24px}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{background:var(--ground);color:var(--t1);font-family:var(--sans);line-height:1.8;
+    -webkit-font-smoothing:antialiased;font-size:15px}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px}
+  a{color:var(--t1)}
+  header.top{padding:72px 0 30px;border-bottom:1px solid var(--hair)}
+  .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--t3)}
+  h1{font-size:clamp(26px,4.6vw,36px);font-weight:640;letter-spacing:-.03em;margin:14px 0 14px;line-height:1.2}
+  .meta{font-family:var(--mono);font-size:11px;color:var(--t3);display:flex;gap:16px;flex-wrap:wrap}
+  .intro{margin:28px 0 0;color:var(--t2);font-size:14.5px}
+  nav.toc{background:var(--sunk);border:1px solid var(--hair);border-radius:6px;padding:22px 24px;margin:34px 0 10px}
+  nav.toc h2{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;
+    color:var(--t3);font-weight:500;margin-bottom:12px}
+  nav.toc ol{list-style:none;counter-reset:toc;columns:2;column-gap:28px}
+  nav.toc li{counter-increment:toc;font-size:13.5px;padding:3px 0;break-inside:avoid}
+  nav.toc li::before{content:counter(toc) ". ";color:var(--t3);font-family:var(--mono);font-size:11px}
+  nav.toc a{color:var(--t2);text-decoration:none}
+  nav.toc a:hover{color:var(--t1);text-decoration:underline}
+  section{padding:34px 0;border-bottom:1px solid var(--hair)}
+  section:last-of-type{border-bottom:0}
+  h2.sec{font-size:19px;font-weight:620;letter-spacing:-.02em;margin-bottom:14px;scroll-margin-top:20px}
+  h3{font-size:14.5px;font-weight:600;margin:20px 0 8px}
+  p{color:var(--t2);margin-bottom:12px}
+  p strong, li strong, td strong{color:var(--t1);font-weight:580}
+  ul,ol.list{margin:0 0 12px 20px;color:var(--t2)}
+  li{margin-bottom:6px}
+  .none{border-left:2px solid var(--hair2);padding:10px 0 10px 16px;color:var(--t2);background:var(--wash);
+    border-radius:0 4px 4px 0;margin-bottom:12px}
+  .tablewrap{overflow-x:auto;margin:14px 0}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
+  th,td{text-align:left;padding:11px 13px;border:1px solid var(--hair);vertical-align:top;color:var(--t2)}
+  th{background:var(--sunk);color:var(--t1);font-weight:600;font-size:12.5px}
+  footer{padding:36px 0 70px;color:var(--t3);font-size:12.5px;font-family:var(--mono)}
+  footer a{color:var(--t2)}
+  @media(max-width:700px){nav.toc ol{columns:1}}
+</style>
+</head>
+<body>
+
+<header class="top wrap">
+  <div class="lbl">Privacy Policy</div>
+  <h1>개인정보 처리방침</h1>
+  <div class="meta">
+    <span>학습 아카이브 (academy.lupa.kr · my.lupa.kr)</span>
+    <span>시행일 2026. 10. 23.</span>
+    <span>버전 1.0</span>
+  </div>
+  <p class="intro">박배영(이하 '운영자')은 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고
+  이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>목차</h2>
+  <ol>
+    <li><a href="#s1">서비스 개요와 정보주체</a></li>
+    <li><a href="#s2">개인정보의 처리 목적</a></li>
+    <li><a href="#s3">처리하는 개인정보의 항목</a></li>
+    <li><a href="#s4">처리 및 보유 기간</a></li>
+    <li><a href="#s5">파기 절차 및 방법</a></li>
+    <li><a href="#s6">제3자 제공</a></li>
+    <li><a href="#s7">처리업무의 위탁</a></li>
+    <li><a href="#s8">국외 이전</a></li>
+    <li><a href="#s9">타인의 개인정보 보호 조치</a></li>
+    <li><a href="#s10">안전성 확보조치</a></li>
+    <li><a href="#s11">자동 수집 장치·행태정보</a></li>
+    <li><a href="#s12">정보주체의 권리·의무 및 행사방법</a></li>
+    <li><a href="#s13">개인정보 보호책임자</a></li>
+    <li><a href="#s14">권익침해 구제방법</a></li>
+    <li><a href="#s15">해당 없는 처리행위</a></li>
+    <li><a href="#s16">처리방침의 변경</a></li>
+  </ol>
+</nav>
+
+<section id="s1">
+  <h2 class="sec">1. 서비스 개요와 정보주체</h2>
+  <p>학습 아카이브는 운영자 <strong>본인의 대학원 학습 기록</strong>을 한 화면에서 관리하기 위해 운영자가 직접 만들어
+  <strong>본인만 사용하는 개인 도구</strong>입니다. 회원가입 기능이 없고, 운영자 외의 이용자를 받지 않습니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td>운영자(개인정보처리자)</td><td>박배영 (개인)</td></tr>
+    <tr><td>서비스</td><td>학습 아카이브 — 공개 소개 페이지(academy.lupa.kr), 비공개 관리 페이지(my.lupa.kr)</td></tr>
+    <tr><td>정보주체</td><td>운영자 본인 1인</td></tr>
+    <tr><td>연계 외부 서비스</td><td>Google Classroom API(읽기 전용), Cloudflare Pages·Access</td></tr>
+  </table>
+  </div>
+  <p>공개 페이지(academy.lupa.kr)는 <strong>개인정보를 수집하지 않습니다.</strong> 로그인·문의 양식·댓글 기능이 없으며,
+  방문자 분석 도구나 광고 스크립트를 설치하지 않았습니다.</p>
+</section>
+
+<section id="s2">
+  <h2 class="sec">2. 개인정보의 처리 목적</h2>
+  <p>운영자는 다음 목적을 위하여 개인정보를 처리하며, 이 목적 외의 용도로는 이용하지 않습니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>처리 목적</th><th>세부 내용</th></tr>
+    <tr><td>학습 자료 색인</td><td>수강한 수업의 강의자료·과제·공지 제목과 원본 위치를 모아 필요할 때 찾아보기</td></tr>
+    <tr><td>학사 현황 관리</td><td>이수학점·평점·졸업요건 충족 여부와 학위 일정 확인</td></tr>
+    <tr><td>비공개 페이지 접근 통제</td><td>본인 여부를 확인하여 본인 외의 접근을 차단</td></tr>
+  </table>
+  </div>
+</section>
+
+<section id="s3">
+  <h2 class="sec">3. 처리하는 개인정보의 항목</h2>
+  <p>처리하는 개인정보는 처리 목적에 필요한 최소한의 정보입니다. 모든 항목은 <strong>정보주체 본인의 정보</strong>이며,
+  운영자 본인이 본인 계정으로 수집합니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>구분</th><th>처리 항목</th><th>수집 방법</th><th>법적 근거</th></tr>
+    <tr>
+      <td>학습 자료 색인</td>
+      <td>수업명, 과정·학기 표기, 담당 교수명, 주제, 자료·과제·공지의 제목과 설명, 게시일·제출기한, 첨부파일 이름, 원본 링크</td>
+      <td>Google Classroom API (읽기 전용)</td>
+      <td>「개인정보 보호법」 제15조제1항제1호 (정보주체 본인의 동의)</td>
+    </tr>
+    <tr>
+      <td>학사 현황</td>
+      <td>학기별 수강 과목, 이수구분, 학점, 성적, 평점평균, 졸업요건 충족 현황, 학위 일정</td>
+      <td>운영자가 학사시스템 화면을 확인하여 직접 입력</td>
+      <td>「개인정보 보호법」 제15조제1항제1호</td>
+    </tr>
+    <tr>
+      <td>접근 통제</td>
+      <td>Google 계정 이메일 주소, 로그인 시각</td>
+      <td>Cloudflare Access 로그인 시 자동 생성</td>
+      <td>「개인정보 보호법」 제15조제1항제1호, 제29조(안전조치의무)</td>
+    </tr>
+  </table>
+  </div>
+  <p>운영자는 Google Classroom에 대해 <strong>읽기 전용 권한만</strong> 부여받았습니다. 자료를 수정·삭제하거나
+  새로 올릴 수 있는 권한은 요청하지 않았습니다. 승인한 권한은 다음과 같습니다.</p>
+  <ul>
+    <li>수업 목록 보기 (classroom.courses.readonly)</li>
+    <li>수업 과제·자료 보기 (classroom.coursework.me.readonly, classroom.courseworkmaterials.readonly)</li>
+    <li>공지사항 보기 (classroom.announcements.readonly)</li>
+    <li>주제 보기 (classroom.topics.readonly)</li>
+  </ul>
+  <p><strong>수집하지 않는 항목:</strong> 주민등록번호 등 고유식별정보, 생체정보, 금융정보, 위치정보,
+  건강·사상·신념 등 민감정보, 연락처, 주소.</p>
+</section>
+
+<section id="s4">
+  <h2 class="sec">4. 처리 및 보유 기간</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>항목</th><th>보유 기간</th><th>보관 위치</th></tr>
+    <tr><td>학습 자료 색인, 학사 현황</td><td>학위과정 종료 후 본인이 삭제할 때까지</td><td>운영자 개인 컴퓨터, Cloudflare Pages(본인 전용 접근)</td></tr>
+    <tr><td>Google API 접근 토큰</td><td>본인이 권한을 철회할 때까지</td><td>운영자 개인 컴퓨터 (접근 권한 제한 설정)</td></tr>
+    <tr><td>로그인 기록</td><td>Cloudflare Access 기본 보존 기간</td><td>Cloudflare</td></tr>
+  </table>
+  </div>
+  <p>법령에 따라 보존해야 하는 개인정보는 없습니다.</p>
+</section>
+
+<section id="s5">
+  <h2 class="sec">5. 파기 절차 및 방법</h2>
+  <p>보유 기간이 지나거나 처리 목적이 달성되어 개인정보가 불필요하게 되었을 때에는 지체 없이 파기합니다.</p>
+  <ul>
+    <li><strong>전자적 파일:</strong> 복구할 수 없는 방법으로 영구 삭제</li>
+    <li><strong>Google API 권한:</strong> Google 계정 설정의 '보안 → 타사 앱 연결'에서 연결 해제</li>
+    <li><strong>호스팅 데이터:</strong> Cloudflare Pages 배포본 및 이전 배포 이력 삭제</li>
+  </ul>
+</section>
+
+<section id="s6">
+  <h2 class="sec">6. 제3자 제공</h2>
+  <div class="none">운영자는 개인정보를 <strong>제3자에게 제공하지 않습니다.</strong> 판매·대여·공유하지 않으며,
+  법령에 근거한 수사기관의 적법한 요청이 있는 경우를 제외하고 외부에 넘기지 않습니다.</div>
+</section>
+
+<section id="s7">
+  <h2 class="sec">7. 처리업무의 위탁</h2>
+  <p>서비스 운영을 위해 다음 업무를 위탁하고 있습니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>수탁자</th><th>위탁 업무</th><th>보유·이용 기간</th></tr>
+    <tr><td>Cloudflare, Inc.</td><td>웹 페이지 호스팅, 접근 인증·통제(Cloudflare Access), 도메인 네임서버</td><td>위탁계약 종료 시까지</td></tr>
+    <tr><td>Google LLC</td><td>Google Classroom API를 통한 학습 자료 조회, 로그인 인증</td><td>권한 철회 시까지</td></tr>
+  </table>
+  </div>
+  <p>마케팅·광고·고객응대·결제 업무는 위탁하지 않습니다.</p>
+</section>
+
+<section id="s8">
+  <h2 class="sec">8. 국외 이전</h2>
+  <p>위 수탁자의 서버가 국외에 있어 개인정보가 국외로 이전됩니다. 「개인정보 보호법」 제28조의8에 따라 다음과 같이 알립니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>이전받는 자</th><th>국가</th><th>이전 항목</th><th>이전 목적</th><th>이전 일시·방법</th><th>보유 기간</th></tr>
+    <tr>
+      <td>Cloudflare, Inc.<br><span style="font-size:12px">privacyquestions@cloudflare.com</span></td>
+      <td>미국 등 Cloudflare 글로벌 네트워크 소재국</td>
+      <td>페이지에 포함된 학습 자료 색인·학사 현황, 로그인 이메일, 접속 기록</td>
+      <td>호스팅 및 접근 통제</td>
+      <td>페이지 배포 및 접속 시 네트워크를 통해 전송</td>
+      <td>위탁계약 종료 시까지</td>
+    </tr>
+    <tr>
+      <td>Google LLC<br><span style="font-size:12px">Google 개인정보처리방침 참조</span></td>
+      <td>미국</td>
+      <td>Google 계정 식별정보, 조회한 수업·자료 메타데이터</td>
+      <td>Classroom API 조회, 로그인 인증</td>
+      <td>API 호출 시 네트워크를 통해 전송</td>
+      <td>권한 철회 시까지</td>
+    </tr>
+  </table>
+  </div>
+  <p><strong>국외 이전을 거부하는 방법:</strong> 정보주체(운영자 본인)는 Google 계정에서 앱 연결을 해제하거나
+  Cloudflare 배포를 삭제하여 국외 이전을 중단할 수 있습니다. 다만 이 경우 서비스 이용이 불가능합니다.</p>
+</section>
+
+<section id="s9">
+  <h2 class="sec">9. 타인의 개인정보 보호 조치</h2>
+  <p>학습 자료에는 담당 교수·조교 등 <strong>타인의 성명</strong>이 포함될 수 있습니다. 운영자는 이를 최소한으로 처리하기 위해
+  다음 조치를 취하고 있습니다.</p>
+  <ul>
+    <li>공개 페이지(academy.lupa.kr)에 게시하는 자료에서는 교수·조교 성명을 <strong>마스킹</strong>합니다 (예: 김○수 교수).</li>
+    <li>공개 페이지에서는 Google Classroom·Drive <strong>원본 링크를 모두 제거</strong>합니다.</li>
+    <li>타인의 연락처·이메일·소속 등은 수집하지 않으며, 자료에 포함된 경우 공개 전 삭제합니다.</li>
+    <li>성명이 포함된 원본 자료는 비공개 페이지에서 <strong>본인만</strong> 열람하며 외부에 제공하지 않습니다.</li>
+  </ul>
+</section>
+
+<section id="s10">
+  <h2 class="sec">10. 안전성 확보조치</h2>
+  <p>「개인정보 보호법」 제29조에 따라 다음과 같은 조치를 취하고 있습니다.</p>
+  <ul>
+    <li><strong>접근 통제:</strong> 비공개 페이지는 Cloudflare Access로 보호하며, 지정한 Google 계정만 접근할 수 있습니다.
+    인증을 거치지 않은 요청은 차단합니다.</li>
+    <li><strong>권한 최소화:</strong> Google Classroom에 읽기 전용 권한만 부여받았습니다.</li>
+    <li><strong>전송 구간 암호화:</strong> 모든 페이지를 HTTPS로만 제공합니다.</li>
+    <li><strong>접근 권한 관리:</strong> API 인증 토큰은 운영자 개인 컴퓨터에 소유자만 읽을 수 있는 권한으로 저장하며,
+    공개 저장소에 포함하지 않습니다.</li>
+    <li><strong>공개 범위 분리:</strong> 공개본은 마스킹을 거쳐 별도로 생성하며, 배포 전 개인식별정보 포함 여부를
+    자동으로 검사하여 발견 시 배포를 중단합니다.</li>
+    <li><strong>검색 노출 차단:</strong> 비공개 페이지는 검색엔진 수집을 거부하도록 설정했습니다.</li>
+  </ul>
+</section>
+
+<section id="s11">
+  <h2 class="sec">11. 자동 수집 장치·행태정보</h2>
+  <div class="none">운영자는 <strong>쿠키를 이용한 맞춤형 광고나 행태정보 수집을 하지 않습니다.</strong>
+  Google Analytics 등 방문자 분석 도구와 광고 SDK를 설치하지 않았으며, 제3자가 행태정보를 수집하도록 허용하지 않습니다.
+  비공개 페이지 접근 인증을 위해 Cloudflare Access가 인증 쿠키를 사용하며, 이는 로그인 상태 유지에만 쓰입니다.</div>
+</section>
+
+<section id="s12">
+  <h2 class="sec">12. 정보주체의 권리·의무 및 행사방법</h2>
+  <p>정보주체는 언제든지 개인정보 <strong>열람·정정·삭제·처리정지</strong>를 요구할 수 있으며,
+  「개인정보 보호법」 제35조의2에 따른 <strong>전송요구권</strong>을 행사할 수 있습니다.</p>
+  <ul>
+    <li>아래 보호책임자 연락처로 서면·이메일을 통해 요구할 수 있습니다.</li>
+    <li>Google 계정 → 보안 → '타사 앱 및 서비스 연결'에서 이 서비스의 접근 권한을 직접 철회할 수 있습니다.</li>
+    <li>운영자는 요구를 받은 날부터 10일 이내에 조치하고 그 결과를 알립니다.</li>
+  </ul>
+</section>
+
+<section id="s13">
+  <h2 class="sec">13. 개인정보 보호책임자</h2>
+  <p>운영자는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및
+  피해구제 등을 위하여 다음과 같이 개인정보 보호책임자를 지정하고 있습니다.
+  열람청구 접수·처리도 동일한 연락처로 받습니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>구분</th><th>내용</th></tr>
+    <tr><td>개인정보 보호책임자</td><td>박배영</td></tr>
+    <tr><td>이메일</td><td>paeyoungpark@gmail.com</td></tr>
+  </table>
+  </div>
+</section>
+
+<section id="s14">
+  <h2 class="sec">14. 권익침해 구제방법</h2>
+  <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 아래 기관에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>기관</th><th>전화</th><th>홈페이지</th></tr>
+    <tr><td>개인정보분쟁조정위원회</td><td>1833-6972</td><td>www.kopico.go.kr</td></tr>
+    <tr><td>개인정보침해신고센터 (한국인터넷진흥원)</td><td>국번 없이 118</td><td>privacy.kisa.or.kr</td></tr>
+    <tr><td>대검찰청 사이버수사과</td><td>국번 없이 1301</td><td>www.spo.go.kr</td></tr>
+    <tr><td>경찰청 국가수사본부 사이버범죄 신고</td><td>국번 없이 182</td><td>ecrm.police.go.kr</td></tr>
+  </table>
+  </div>
+  <p>「개인정보 보호법」 제35조(열람), 제36조(정정·삭제), 제37조(처리정지)에 따른 요구에 대하여 처분 또는 부작위로
+  권리나 이익을 침해받은 사람은 행정심판법에 따라 행정심판을 청구할 수 있습니다.</p>
+</section>
+
+<section id="s15">
+  <h2 class="sec">15. 해당 없는 처리행위</h2>
+  <p>다음 사항은 이 서비스에서 <strong>처리하지 않습니다.</strong></p>
+  <ul>
+    <li>14세 미만 아동의 개인정보 처리</li>
+    <li>민감정보 및 고유식별정보 처리</li>
+    <li>가명정보 처리</li>
+    <li>개인정보의 추가적인 이용·제공</li>
+    <li>인공지능 기술을 적용한 자동화된 결정 (법 제37조의2) — 화면에 표시되는 분류·우선순위는 운영자가 정한 규칙에 따른 단순 계산이며, 정보주체의 권리·의무에 영향을 미치는 결정을 하지 않습니다</li>
+    <li>영상정보처리기기(CCTV) 운영</li>
+    <li>국내대리인 지정 대상 해당 사항</li>
+    <li>마케팅·광고성 정보 전송</li>
+  </ul>
+</section>
+
+<section id="s16">
+  <h2 class="sec">16. 처리방침의 변경</h2>
+  <p>이 개인정보 처리방침은 <strong>2026년 10월 23일</strong>부터 적용됩니다.</p>
+  <p>법령·정책 또는 서비스 내용의 변경에 따라 내용의 추가·삭제·수정이 있을 경우에는 변경되는 처리방침을
+  시행하기 최소 7일 전에 이 페이지를 통해 알립니다. 중요한 변경이 있는 경우에는 30일 전에 알립니다.</p>
+  <p>이 처리방침은 버전 1.0이며, 이전 버전은 없습니다. 개정 시 이 항목에 이전 버전 링크를 추가합니다.</p>
+</section>
+
+<footer>
+  <a href="/">← 학습 아카이브</a> · <a href="/terms">서비스 약관</a> · 시행일 2026. 10. 23.
+</footer>
+
+</div>
+</body>
+</html>
